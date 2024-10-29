@@ -4,26 +4,46 @@ var swiper = new Swiper(".slide-intro", {
   loop: true,
   // autoplay: true,
   pagination: {
-    el: ".slide-intro .swiper-pagination",
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+});
+
+var swiper2 = new Swiper(".slide-introduce", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
+});
+
+var swiper = new Swiper(".scroll-oled", {
+  // direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheel: true,
+  pagination: {
+    el: ".swiper-pagination",
     clickable: true,
   },
 });
 
-var swiper = new Swiper(".slide-studio", {
-  slidesPerView: 1.2,
-  spaceBetween: 20,
+var swiper = new Swiper(".slide-qd", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
   pagination: {
-    el: ".slide-studio .swiper-pagination",
+    el: ".swiper-pagination",
     clickable: true,
   },
-  breakpoints: {
-    600: {
-      slidesPerView: 2.2,
-      spaceBetween: 20,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
+});
+
+var swiper = new Swiper(".scroll-news", {
+  // direction: "vertical",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
 });
